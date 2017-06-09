@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
+    tools:context="com.kshimauchi.gratuity.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/text_view_height"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:fontFamily="cursive"
+
+        android:textColor="#FFFFFF"
+        android:text="@string/subtotal"
+        android:id="@+id/sub_total_prompt"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/text_view_margin"
+        android:textSize="@dimen/text_size"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/text_view_height"
+            android:layout_margin="@dimen/text_view_margin"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000"
+
+            android:background="#ffffff"
+            android:inputType="numberDecimal"
+            android:ems="8"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/subtotal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/sub_total_prompt"
+        android:id="@+id/seekBarLine"
+        android:layout_margin="@dimen/text_view_margin">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/text_view_height"
+            android:text="@string/tipPercentPrompt"
+            android:id="@+id/tipPercentPrompt"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_size" />
+
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekbar"
+            android:max ="30"
+            android:progress="15"
+            android:progressDrawable="@drawable/custome_progress"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:minWidth="70dp"
+            android:layout_height="@dimen/text_view_height"
+            android:text="0%"
+            android:id="@+id/tipPercent"
+            android:textSize="@dimen/text_size"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/text_view_height"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/tipPrompt"
+            android:id="@+id/tipPrompt"
+            android:layout_below="@id/seekBarLine"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/text_view_margin"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/text_view_height"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="$0.00"
+            android:id="@+id/tip"
+            android:layout_below="@id/seekBarLine"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/text_view_margin"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_view_height"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/total"
+            android:id="@+id/totalPrompt"
+            android:layout_below="@id/tipPrompt"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/text_size"
+            android:layout_alignStart="@+id/tip"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_view_height"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="$0.00"
+            android:textColor="#FFFFFF"
+            android:id="@+id/total"
+            android:textSize="@dimen/text_size_small"
+            android:layout_marginRight="@dimen/text_view_margin"
+            android:layout_below="@+id/tip"
+            android:layout_alignStart="@+id/tip"
+             />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate"
+            android:id="@+id/button"
+            android:background="#37AEE4"
+            android:fontFamily="Cursive"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_size_small"
+            android:layout_below="@+id/totalPrompt"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="40dp" />
+
+    </RelativeLayout>
+</ScrollView>
+</RelativeLayout>

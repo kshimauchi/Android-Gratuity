@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Gratuity</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="sub_total_prompt"> </string>
+    <string name="tipPercentPrompt">Tip %</string>
+    <string name="tipPrompt">Tip:</string>
+    <string name="totalPrompt">Total:</string>
+    <string name="total">Total:</string>
+    <string name="calculate">Calculate</string>
+</resources>
